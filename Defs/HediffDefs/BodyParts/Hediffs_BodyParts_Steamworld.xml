@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Base for steamworld bionic thingdefs -->
+  <!-- NOTE: In code, refer to steamworld bionics as "SteamworldXYZ", while in-game text should be refered to as "steam-powered" -->
+
+  <ThingDef Name="BodyPartSteamworldBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Medieval</techLevel>
+    <thingCategories>
+      <li>BodyPartsBionic</li> <!-- A new category might be good -->
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath> <!-- Feel free to change -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(127,72,41)</color> <!-- Brown, like steampunk or somethin' -->
+    </graphicData>
+    <tradeTags>
+      <li>Bionic</li> <!-- Change? -->
+    </tradeTags>
+    <techHediffsTags>
+      <li>Advanced</li> <!-- Change? -->
+    </techHediffsTags>
+    <statBases>
+      <WorkToMake>14000</WorkToMake> <!-- originally 26000 -->
+    </statBases>
+    <recipeMaker> <!-- Feel free to change these -->
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>Bionics</researchPrerequisite> <!-- Custom research? -->
+      <recipeUsers> <!--Custom bench?-->
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- Steamworld eye -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SteamworldEye</defName>
+    <label>steam-powered eye</label>
+    <labelNoun>a steam-powered eye</labelNoun>
+    <description>An installed steam-powered eye.</description>
+    <descriptionHyperlinks><ThingDef>SteamworldEye</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SteamworldEye</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartSteamworldBase">
+    <defName>SteamworldEye</defName>
+    <label>steam-powered eye</label>
+    <description>Todo</description> <!-- I have no idea what to right here right now. I'll do it later if you want-->
+    <descriptionHyperlinks><RecipeDef>InstallSteamworldEye</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>0.6</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSteamworldEye</defName>
+    <label>install steam-powered eye</label>
+    <description>Install a steam-powered eye.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SteamworldEye</ThingDef>
+      <HediffDef>SteamworldEye</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing steam-powered eye.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteamworldEye</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteamworldEye</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SteamworldEye</addsHediff>
+  </RecipeDef>
+
+  <!-- Steamworld arm -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SteamworldArm</defName>
+    <label>steam-powered arm</label>
+    <labelNoun>a steam-powered arm</labelNoun>
+    <description>An installed steam-powered arm.</description>
+    <descriptionHyperlinks><ThingDef>SteamworldArm</ThingDef></descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8</power> <!--originally 12-->
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SteamworldArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartSteamworldBase">
+    <defName>SteamworldArm</defName>
+    <label>steam-powered arm</label>
+    <description>Todo</description>
+    <descriptionHyperlinks><RecipeDef>InstallSteamworldArm</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial> <!-- all bionic costlists cost the same except the stomach and ear-->
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>6</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSteamworldArm</defName>
+    <label>install steam-powered arm</label>
+    <description>Install a steam-powered arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SteamworldArm</ThingDef>
+      <HediffDef>SteamworldArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing steam-powered arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteamworldArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteamworldArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SteamworldArm</addsHediff>
+  </RecipeDef>
+
+  <!-- Steamworld leg -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SteamworldLeg</defName>
+    <label>steam-powered leg</label>
+    <labelNoun>a steam-powered leg</labelNoun>
+    <description>An installed steam-powered leg.</description>
+    <descriptionHyperlinks><ThingDef>SteamworldLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SteamworldLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartSteamworldBase">
+    <defName>SteamworldLeg</defName>
+    <label>steam-powered leg</label>
+    <description>Todo</description>
+    <descriptionHyperlinks><RecipeDef>InstallSteamworldLeg</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>9</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSteamworldLeg</defName>
+    <label>install steam-powered leg</label>
+    <description>Install a steam-powered leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SteamworldLeg</ThingDef>
+      <HediffDef>SteamworldLeg</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing steam-powered leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteamworldLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteamworldLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SteamworldLeg</addsHediff>
+  </RecipeDef>
+
+  <!-- Steamworld heart -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SteamworldHeart</defName>
+    <label>steam-powered heart</label>
+    <labelNoun>a steam-powered heart</labelNoun>
+    <description>An installed steam-powered heart.</description>
+    <descriptionHyperlinks><ThingDef>SteamworldHeart</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SteamworldHeart</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartSteamworldBase">
+    <defName>SteamworldHeart</defName>
+    <label>steam-powered heart</label>
+    <description>Todo</description>
+    <descriptionHyperlinks><RecipeDef>InstallSteamworldHeart</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSteamworldHeart</defName>
+    <label>install steam-powered heart</label>
+    <description>Install a steam-powered heart.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SteamworldHeart</ThingDef>
+      <HediffDef>SteamworldHeart</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing steam-powered heart.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteamworldHeart</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteamworldHeart</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SteamworldHeart</addsHediff>
+  </RecipeDef>
+
+  <!-- Steamworld stomach -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SteamworldStomach</defName>
+    <label>steam-powered stomach</label>
+    <labelNoun>a steam-powered stomach</labelNoun>
+    <description>An installed steam-powered stomach.</description>
+    <descriptionHyperlinks><ThingDef>SteamworldStomach</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SteamworldStomach</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartSteamworldBase">
+    <defName>SteamworldStomach</defName>
+    <label>steam-powered stomach</label>
+    <description>Todo</description>
+    <descriptionHyperlinks><RecipeDef>InstallSteamworldStomach</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>4</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSteamworldStomach</defName>
+    <label>install steam-powered stomach</label>
+    <description>Install a steam-powered stomach.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SteamworldStomach</ThingDef>
+      <HediffDef>SteamworldStomach</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing steam-powered stomach.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteamworldStomach</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteamworldStomach</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Stomach</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SteamworldStomach</addsHediff>
+  </RecipeDef>
+  
+  <!-- Steamworld ear -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SteamworldEar</defName>
+    <label>steam-powered ear</label>
+    <labelNoun>a steam-powered ear</labelNoun>
+    <description>An installed steam-powered ear.</description>
+    <descriptionHyperlinks><ThingDef>SteamworldEar</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SteamworldEar</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartSteamworldBase">
+    <defName>SteamworldEar</defName>
+    <label>steam-powered ear</label>
+    <description>Todo</description>
+    <descriptionHyperlinks><RecipeDef>InstallSteamworldEar</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>15</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallSteamworldEar</defName>
+    <label>install steam-powered ear</label>
+    <description>Install a steam-powered ear.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SteamworldEar</ThingDef>
+      <HediffDef>SteamworldEar</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing steam-powered ear.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteamworldEar</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteamworldEar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Ear</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SteamworldEar</addsHediff>
+  </RecipeDef>
+
+</Defs>

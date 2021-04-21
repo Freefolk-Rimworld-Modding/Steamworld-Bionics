@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+<packageId>TrahsPanda.SteamworldBionics</packageId> <!-- Feel free to change this if you want -->
+	<name>Steamworld Bionics</name>
+	<author>TrahsPanda</author>
+	<supportedVersions>
+		<li>1.2</li>
+	</supportedVersions>
+	<!--modDependencies> Steamworld mod info goes here
+	  <li>
+		<packageId></packageId>
+		<displayName></displayName>
+		<steamWorkshopUrl></steamWorkshopUrl>
+		<downloadUrl></downloadUrl>
+	  </li>
+	</modDependencies-->
+	<description>Adds steam-powered bionics.</description>	
+</ModMetaData>

@@ -1,0 +1,8 @@
+current ver. initial push/0.0.0-prealpha
+--------------------------------------------------
+Remove HediffResourceFramework.dll once HRF is released [minor]
+Add textures [minor]
+Remove XML Template on release [fix]
+Add HRF support [major, prealpha -> alpha]
+
+Any tweaks to values should be considered a fix

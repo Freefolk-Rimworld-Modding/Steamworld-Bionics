@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchTabDef>
+    <defName>FF_Steamworldproject</defName>
+    <label>FF Steamworld bionics research</label>
+  </ResearchTabDef>
+
+<!-- Steam Bionics production -->
+
+  <ResearchProjectDef>
+    <defName>FF_SteamBionicsProduction</defName>
+    <label>Steam bionics production</label>
+    <techLevel>Industrial</techLevel>
+    <description>Make Steam powered bionics, Bionics that require fuel to operate but are stronger then flesh.</description>
+    <baseCost>4000</baseCost>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+    <tab>FF_Drugs</tab>
+  </ResearchProjectDef>

@@ -35,7 +35,7 @@
       </skillRequirements>
       <researchPrerequisite>Bionics</researchPrerequisite> <!-- Custom research? --Sure-->
       <recipeUsers> <!--Custom bench?--If you can code it yes. Otherwise smithing table ?)--> 
-        <li>FabricationBench</li>
+        <li>SmithingBench</li>
       </recipeUsers>
     </recipeMaker>
   </ThingDef>
@@ -59,7 +59,7 @@
   <ThingDef ParentName="BodyPartSteamworldBase">
     <defName>SteamworldEye</defName>
     <label>steam-powered eye</label>
-    <description>Todo</description> <!-- I have no idea what to right here right now. I'll do it later if you want--I can do them don't worry-->
+    <description>An eye that uses steam to allow the user to see but requires fuel to operate.</description> <!-- I have no idea what to right here right now. I'll do it later if you want--I can do them don't worry-->
     <descriptionHyperlinks><RecipeDef>InstallSteamworldEye</RecipeDef></descriptionHyperlinks>
     <costList>
       <Steel>75</Steel>
@@ -136,7 +136,7 @@
   <ThingDef ParentName="BodyPartSteamworldBase">
     <defName>SteamworldArm</defName>
     <label>steam-powered arm</label>
-    <description>Todo</description>
+    <description>An arm that uses steam to make it move faster and thus, work faster by using steam to move hydraulics. However it requires fuel to operate.</description>
     <descriptionHyperlinks><RecipeDef>InstallSteamworldArm</RecipeDef></descriptionHyperlinks>
     <costList>
       <Steel>80</Steel>
@@ -197,7 +197,7 @@
   <ThingDef ParentName="BodyPartSteamworldBase">
     <defName>SteamworldLeg</defName>
     <label>steam-powered leg</label>
-    <description>Todo</description>
+    <description>A leg that uses steam to make it move faster and thus, move faster by using steam to move hydraulics. However it requires fuel to operate.</description>
     <descriptionHyperlinks><RecipeDef>InstallSteamworldLeg</RecipeDef></descriptionHyperlinks>
     <costList>
       <Steel>90</Steel>
@@ -258,7 +258,7 @@
   <ThingDef ParentName="BodyPartSteamworldBase">
     <defName>SteamworldHeart</defName>
     <label>steam-powered heart</label>
-    <description>Todo</description>
+    <description>A heart that uses 8 steam compressers to pump blood. However since it's uses steam to work it requires fuel to produce steam.</description>
     <descriptionHyperlinks><RecipeDef>InstallSteamworldHeart</RecipeDef></descriptionHyperlinks>
     <costList>
       <Steel>120</Steel>
@@ -307,7 +307,7 @@
     <spawnThingOnRemoved>SteamworldStomach</spawnThingOnRemoved>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>0.90</partEfficiency>
+      <partEfficiency>0.80</partEfficiency>
       <betterThanNatural>false</betterThanNatural>
     </addedPartProps>
   </HediffDef>
@@ -315,11 +315,11 @@
   <ThingDef ParentName="BodyPartSteamworldBase">
     <defName>SteamworldStomach</defName>
     <label>steam-powered stomach</label>
-    <description>Todo</description>
+    <description>A stomach that uses 4 steam compressers to compress food down so the body can consume it. but it's less efficient compared to a normal stomach because it dosen't have acid to digest the food.As it uses steam to operate it requires fuel to produce said steam. </description>
     <descriptionHyperlinks><RecipeDef>InstallSteamworldStomach</RecipeDef></descriptionHyperlinks>
     <costList>
       <Steel>30</Steel>
-      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentIndustrial>9</ComponentIndustrial>
     </costList>
     <statBases>
       <Mass>4</Mass>
@@ -375,7 +375,7 @@
   <ThingDef ParentName="BodyPartSteamworldBase">
     <defName>SteamworldEar</defName>
     <label>steam-powered ear</label>
-    <description>Todo</description>
+    <description>An ear that uses steam to allow hearing however not only is it less precise as compared to a natural ear and it also requires fuel to produce steam to operate. </description>
     <descriptionHyperlinks><RecipeDef>InstallSteamworldEar</RecipeDef></descriptionHyperlinks>
     <costList>
       <Steel>30</Steel>

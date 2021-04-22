@@ -16,13 +16,13 @@
       <color>(127,72,41)</color> <!-- Brown, like steampunk or somethin' -->
     </graphicData>
     <tradeTags>
-      <li>Bionic</li> <!-- Change? -->
+      <li>Bionic</li> <!-- Change? --Change to what ?-->
     </tradeTags>
     <techHediffsTags>
-      <li>Advanced</li> <!-- Change? -->
+      <li>Advanced</li> <!-- Change? --Change to what ?-->
     </techHediffsTags>
     <statBases>
-      <WorkToMake>14000</WorkToMake> <!-- originally 26000 -->
+      <WorkToMake>17000</WorkToMake> <!-- originally 26000 -->
     </statBases>
     <recipeMaker> <!-- Feel free to change these -->
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -31,10 +31,10 @@
       <soundWorking>Recipe_Smith</soundWorking>
       <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
       <skillRequirements>
-        <Crafting>6</Crafting>
+        <Crafting>7</Crafting>
       </skillRequirements>
-      <researchPrerequisite>Bionics</researchPrerequisite> <!-- Custom research? -->
-      <recipeUsers> <!--Custom bench?-->
+      <researchPrerequisite>Bionics</researchPrerequisite> <!-- Custom research? --Sure-->
+      <recipeUsers> <!--Custom bench?--If you can code it yes. Otherwise smithing table ?)--> 
         <li>FabricationBench</li>
       </recipeUsers>
     </recipeMaker>
@@ -51,7 +51,7 @@
     <spawnThingOnRemoved>SteamworldEye</spawnThingOnRemoved>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>0.80</partEfficiency>
+      <partEfficiency>0.85</partEfficiency>
       <betterThanNatural>false</betterThanNatural>
     </addedPartProps>
   </HediffDef>
@@ -59,11 +59,11 @@
   <ThingDef ParentName="BodyPartSteamworldBase">
     <defName>SteamworldEye</defName>
     <label>steam-powered eye</label>
-    <description>Todo</description> <!-- I have no idea what to right here right now. I'll do it later if you want-->
+    <description>Todo</description> <!-- I have no idea what to right here right now. I'll do it later if you want--I can do them don't worry-->
     <descriptionHyperlinks><RecipeDef>InstallSteamworldEye</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Steel>60</Steel>
-      <ComponentIndustrial>5</ComponentIndustrial>
+      <Steel>75</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
     </costList>
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     <statBases>
@@ -117,8 +117,8 @@
             <capacities>
               <li>Blunt</li>
             </capacities>
-            <power>8</power> <!--originally 12-->
-            <cooldownTime>2</cooldownTime>
+            <power>9</power> <!--originally 12-->
+            <cooldownTime>1.4</cooldownTime>
             <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
             <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
           </li>
@@ -128,8 +128,8 @@
     <spawnThingOnRemoved>SteamworldArm</spawnThingOnRemoved>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>0.80</partEfficiency>
-      <betterThanNatural>false</betterThanNatural>
+      <partEfficiency>1.05</partEfficiency>  <!--Everything should be better then natural but the eyes and ears I feel.-->
+      <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
   </HediffDef>
 
@@ -139,7 +139,7 @@
     <description>Todo</description>
     <descriptionHyperlinks><RecipeDef>InstallSteamworldArm</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Steel>60</Steel>
+      <Steel>80</Steel>
       <ComponentIndustrial>5</ComponentIndustrial> <!-- all bionic costlists cost the same except the stomach and ear-->
     </costList>
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
@@ -189,8 +189,8 @@
     <spawnThingOnRemoved>SteamworldLeg</spawnThingOnRemoved>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>0.80</partEfficiency>
-      <betterThanNatural>false</betterThanNatural>
+      <partEfficiency>1.10</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
   </HediffDef>
 
@@ -200,8 +200,8 @@
     <description>Todo</description>
     <descriptionHyperlinks><RecipeDef>InstallSteamworldLeg</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Steel>60</Steel>
-      <ComponentIndustrial>5</ComponentIndustrial>
+      <Steel>90</Steel>
+      <ComponentIndustrial>7</ComponentIndustrial>
     </costList>
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     <statBases>
@@ -250,8 +250,8 @@
     <spawnThingOnRemoved>SteamworldHeart</spawnThingOnRemoved>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>0.80</partEfficiency>
-      <betterThanNatural>false</betterThanNatural>
+      <partEfficiency>1.15</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
   </HediffDef>
 
@@ -261,8 +261,8 @@
     <description>Todo</description>
     <descriptionHyperlinks><RecipeDef>InstallSteamworldHeart</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Steel>60</Steel>
-      <ComponentIndustrial>5</ComponentIndustrial>
+      <Steel>120</Steel>
+      <ComponentIndustrial>14</ComponentIndustrial>
     </costList>
   </ThingDef>
 
@@ -307,7 +307,7 @@
     <spawnThingOnRemoved>SteamworldStomach</spawnThingOnRemoved>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>0.80</partEfficiency>
+      <partEfficiency>0.90</partEfficiency>
       <betterThanNatural>false</betterThanNatural>
     </addedPartProps>
   </HediffDef>
@@ -319,7 +319,7 @@
     <descriptionHyperlinks><RecipeDef>InstallSteamworldStomach</RecipeDef></descriptionHyperlinks>
     <costList>
       <Steel>30</Steel>
-      <ComponentIndustrial>3</ComponentIndustrial>
+      <ComponentIndustrial>8</ComponentIndustrial>
     </costList>
     <statBases>
       <Mass>4</Mass>
@@ -378,8 +378,8 @@
     <description>Todo</description>
     <descriptionHyperlinks><RecipeDef>InstallSteamworldEar</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Steel>15</Steel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>30</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
     </costList>
   </ThingDef>
 

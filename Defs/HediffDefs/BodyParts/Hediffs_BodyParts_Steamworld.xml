@@ -16,10 +16,10 @@
       <color>(127,72,41)</color> <!-- Brown, like steampunk or somethin' -->
     </graphicData>
     <tradeTags>
-      <li>Bionic</li> <!-- Change? --Change to what ?-->
+      <li>Bionic</li> <!-- Change? Change to what ?-->
     </tradeTags>
     <techHediffsTags>
-      <li>Advanced</li> <!-- Change? --Change to what ?-->
+      <li>Advanced</li> <!-- Change? Change to what ?-->
     </techHediffsTags>
     <statBases>
       <WorkToMake>17000</WorkToMake> <!-- originally 26000 -->
@@ -33,8 +33,8 @@
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
-      <researchPrerequisite>Bionics</researchPrerequisite> <!-- Custom research? --Sure-->
-      <recipeUsers> <!--Custom bench?--If you can code it yes. Otherwise smithing table ?)--> 
+      <researchPrerequisite>Bionics</researchPrerequisite> <!-- Custom research? Sure-->
+      <recipeUsers> <!--Custom bench?If you can code it yes. Otherwise smithing table ?)--> 
         <li>SmithingBench</li>
       </recipeUsers>
     </recipeMaker>
@@ -59,7 +59,7 @@
   <ThingDef ParentName="BodyPartSteamworldBase">
     <defName>SteamworldEye</defName>
     <label>steam-powered eye</label>
-    <description>An eye that uses steam to allow the user to see but requires fuel to operate.</description> <!-- I have no idea what to right here right now. I'll do it later if you want--I can do them don't worry-->
+    <description>An eye that uses steam to allow the user to see but requires fuel to operate.</description> <!-- I have no idea what to right here right now. I'll do it later if you want I can do them don't worry-->
     <descriptionHyperlinks><RecipeDef>InstallSteamworldEye</RecipeDef></descriptionHyperlinks>
     <costList>
       <Steel>75</Steel>

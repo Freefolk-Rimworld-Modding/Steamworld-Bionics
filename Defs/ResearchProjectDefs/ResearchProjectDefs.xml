@@ -13,7 +13,7 @@
     <label>Steam bionics production</label>
     <techLevel>Industrial</techLevel>
     <description>Make Steam powered bionics, Bionics that require fuel to operate but are stronger then flesh.</description>
-    <baseCost>4000</baseCost>
+    <baseCost>4500</baseCost>
     <researchViewX>0</researchViewX>
     <researchViewY>0</researchViewY>
     <tab>FF_Drugs</tab>
